@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="row"><!-- score panel logo -->
+      <div class="col-md-12">
+        <div class="page-header">
+          <img class="img-responsive center-block" ng-src="{{ratingCtrl.brandLogoSrc}}" alt="brand-logo">
+          <br>
+          <img ng-show="ratingCtrl.hasReviews" class="img-responsive center-block" ng-src="{{ratingCtrl.scoreImgSrc(        ratingCtrl.average)}}" alt="">
+        </div>             
+      </div>
+    </div><!-- /score panel logo -->
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-center">Based on <strong>{{ ratingCtrl.count }}</strong> {{ ratingCtrl.count > 1 ? 'reviews' : 'review'}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6"><!-- progress bars -->
+    <div class="panel-border panel-default">
+      <div class="panel-body">
+        <div class="progress" ng-repeat="star in ratingCtrl.stars track by $index" >
+          <div class="progress-bar-base" ng-class="ratingCtrl.setBarColor($index+1)" role="progressbar" aria-valuemin="0" aria-valuemax="100" ng-style="ratingCtrl.setProgressBar(star.percent)">
+          </div>            
+        </div>
+      </div>
+    </div>
+  </div><!-- /progress bars -->
+</div>

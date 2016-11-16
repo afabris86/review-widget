@@ -1,0 +1,27 @@
+$font-stack: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$headline-height: 310px;
+$fade-treshold: $headline-height * 0.40;
+$darken-percent: 15%;
+$side-reviews: 2;
+$side-review-height: ($headline-height / $side-reviews) px;
+
+
+
+@import "lib/bootstrap/assets/stylesheets/_bootstrap";
+@import "scores";
+@import "review";
+@import "animations";
+
+
+body {
+  font: 100% $font-stack;
+}
+
+// widget 
+
+.widget-container {
+	@extend .container;
+	display: table;
+	background-color: green;
+}
+

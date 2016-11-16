@@ -1,0 +1,45 @@
+// Colors
+
+$star-1 : #d91e25 !default;
+$star-2 : #f16e24 !default;
+$star-3 : #f7cc19 !default;
+$star-4 : #5e8f3d !default;
+$star-5 : #128e44 !default;
+
+// Panels
+
+.score-panel {
+	@extend .col-md-12;
+	background-image: linear-gradient(180deg, darken($body-bg, $darken-percent), $body-bg);
+}
+
+.progress {
+  background-color: $body-bg;
+  height: 10px;
+}
+
+.panel-score {
+	@extend .panel;
+}
+
+// Progres bars
+
+.progress-bar-star-1 {
+  @include progress-bar-variant($star-1);
+}
+
+.progress-bar-star-2 {
+  @include progress-bar-variant($star-2);
+}
+
+.progress-bar-star-3 {
+  @include progress-bar-variant($star-3);
+}
+
+.progress-bar-star-4 {
+  @include progress-bar-variant($star-4);
+}
+
+.progress-bar-star-5 {
+  @include progress-bar-variant($star-5);
+}
