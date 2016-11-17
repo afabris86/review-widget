@@ -1,7 +1,7 @@
 {
-  "name": "trustpilot-widget",
+  "name": "review-widget",
   "version": "1.0.0",
-  "description": "trustpilot job application",
+  "description": "feed your page with reviews",
   "main": "",
   "dependencies": {
     "angular": "^1.5.8",
